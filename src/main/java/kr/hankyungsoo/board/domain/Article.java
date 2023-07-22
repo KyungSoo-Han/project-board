@@ -38,7 +38,7 @@ public class Article extends AuditingFields{
     @OrderBy("id")
     @OneToMany(mappedBy = "article", cascade = CascadeType.ALL)
     private final Set<ArticleComment> articleComments = new LinkedHashSet<>();
-
+    private String userId; //임시
 
     private Article(String title, String content, String hashtag) {
         this.title = title;
