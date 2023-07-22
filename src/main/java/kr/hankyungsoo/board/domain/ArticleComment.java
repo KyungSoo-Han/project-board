@@ -28,6 +28,10 @@ public class ArticleComment extends AuditingFields {
     private Article article; // 게시글 (ID)
     @Setter @Column(nullable = false, length = 500)
     private String content; // 본문
+    @Setter
+    @Column(updatable = false)
+    private Long parentCommentId; // 부모 댓글 ID   //임시
+    private String userId;  //임시
 
     private ArticleComment(Article article, String content) {
         this.article = article;
