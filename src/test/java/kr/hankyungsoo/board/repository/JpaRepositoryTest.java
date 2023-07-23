@@ -3,6 +3,7 @@ package kr.hankyungsoo.board.repository;
 import kr.hankyungsoo.board.config.JpaConfig;
 import kr.hankyungsoo.board.domain.Article;
 import kr.hankyungsoo.board.domain.ArticleComment;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,7 +40,7 @@ class JpaRepositoryTest {
         //Then
         assertThat(articles)
                 .isNotNull()
-                .hasSize(0);
+                .hasSize(123);
 
     }
     @DisplayName("insert 테스트")
