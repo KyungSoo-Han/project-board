@@ -50,7 +50,6 @@ class JpaRepositoryTest {
         long previousCount = articleRepository.count();
 
         //When
-        Article savedArticle = articleRepository.save(Article.of("new article","new content", "#spring"));
 
         //Then
         assertThat(articleRepository.count()).isEqualTo(previousCount+1);
@@ -61,7 +60,6 @@ class JpaRepositoryTest {
     @Test
     void givenTestData_whenUpdating_thenWorksFine() throws Exception{
         //Given
-        Article preSavedArticle = articleRepository.save(Article.of("new article","new content", "#spring"));
 
         Article article = articleRepository.findById(1L).orElseThrow();
         String updatedHashtag= "#springboot";
@@ -80,7 +78,6 @@ class JpaRepositoryTest {
     @Test
     void givenTestData_whenDeleting_thenWorksFine() throws Exception{
         //Given
-        Article preSavedArticle = articleRepository.save(Article.of("new article","new content", "#spring"));
         Article article = articleRepository.findById(1L).orElseThrow();
         //ArticleComment preSavedArticleComment = articleCommentRepository.save(ArticleComment.of(article, "첫번째 댓글"));
 
