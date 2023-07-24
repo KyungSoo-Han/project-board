@@ -25,7 +25,8 @@ public class ArticleComment extends AuditingFields {
     @Setter
     @Column(updatable = false)
     private Long parentCommentId; // 부모 댓글 ID   //임시
-    private String userId;  //임시
+
+    @Setter @ManyToOne(optional = false) private UserAccount userAccount; // 유저 정보 (ID)
 
     private ArticleComment(Article article, String content) {
         this.article = article;
