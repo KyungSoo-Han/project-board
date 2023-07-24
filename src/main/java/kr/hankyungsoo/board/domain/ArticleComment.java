@@ -39,6 +39,7 @@ public class ArticleComment extends AuditingFields {
     @OneToMany(mappedBy = "parentCommentId", cascade = CascadeType.ALL)
     private Set<ArticleComment> childComments = new LinkedHashSet<>();
 
+
     protected ArticleComment() {}
 
     private ArticleComment(Article article, UserAccount userAccount, String content) {
