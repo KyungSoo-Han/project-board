@@ -1,10 +1,10 @@
-##개발 환경
+## 개발 환경
 - Intellij IDEA Ultimate 2022.1.1 ~ 2022.1.3
 - Java 17
 - Gradle 7.4.1
 - Spring Boot 2.7.0
 
-##기술 세부 스택
+## 기술 세부 스택
 Spring Boot
 
 - Spring Web
@@ -19,6 +19,7 @@ Spring Boot
 - Spring Boot DevTools
 - Spring Configuration Processor
 
-##그 외
+그 외
+
 - QueryDSL 5.0.0
 - Bootstrap 5.2.0-Beta1
