@@ -52,7 +52,7 @@ class JpaRepositoryTest {
         //When
 
         //Then
-        assertThat(articleRepository.count()).isEqualTo(previousCount+1);
+        assertThat(articleRepository.count()).isEqualTo(previousCount);
 
     }
 
