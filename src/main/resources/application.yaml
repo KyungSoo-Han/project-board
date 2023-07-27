@@ -1,3 +1,4 @@
+
 debug: false
 management:
   endpoints:
@@ -50,3 +51,5 @@ spring:
 #  test:
 #    database:
 #      replace: none
+server:
+  port: 8090
