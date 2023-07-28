@@ -29,4 +29,11 @@ Spring Boot
 
 - Bootstrap 5.2.0-Beta1
 
+## ERD
+
+(./document/project-board-erd.svg)
+
+## USE CASE
+(./document/use-case.svg)
+
 ![image](https://github.com/KyungSoo-Han/project-board/assets/64920731/dfecb7af-f270-4b77-8aa7-1902a1b1ccd9)
