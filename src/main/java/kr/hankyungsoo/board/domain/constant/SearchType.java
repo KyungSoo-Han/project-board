@@ -1,4 +1,4 @@
-package kr.hankyungsoo.board.domain.type;
+package kr.hankyungsoo.board.domain.constant;
 
 import lombok.Getter;
 
