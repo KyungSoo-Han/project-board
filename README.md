@@ -31,9 +31,17 @@ Spring Boot
 
 ## ERD
 
-(./document/project-board-erd.svg)
+![image](./document/project-board-erd.svg)
 
 ## USE CASE
-(./document/use-case.svg)
 
-![image](https://github.com/KyungSoo-Han/project-board/assets/64920731/dfecb7af-f270-4b77-8aa7-1902a1b1ccd9)
+![image](./document/use-case.svg)
+
+## 화면 캡쳐
+
+### 메인화면
+![image](https://github.com/KyungSoo-Han/project-board/assets/64920731/48ffbca9-5620-480b-a5a3-49d2f17f59ac)
+
+### 상세화면
+![image](https://github.com/KyungSoo-Han/project-board/assets/64920731/a7791ea8-47ac-4e43-8b73-83e566788b80)
+
