@@ -55,5 +55,8 @@ Spring Boot
 ### 해시태그 검색 페이지
 ![image](https://github.com/KyungSoo-Han/project-board/assets/64920731/2e2c7074-56ad-4c1c-ab18-e798974858cc)
 
+## GitKraken을 이용한 GitFlow 
+![image](https://github.com/KyungSoo-Han/project-board/assets/64920731/49ce63d9-fbf1-430b-984e-fe4c1ef20881)
+
 
 
