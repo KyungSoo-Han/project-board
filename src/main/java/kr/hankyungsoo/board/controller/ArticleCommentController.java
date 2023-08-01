@@ -1,13 +1,11 @@
 package kr.hankyungsoo.board.controller;
 
-import kr.hankyungsoo.board.domain.UserAccount;
-import kr.hankyungsoo.board.dto.UserAccountDto;
 import kr.hankyungsoo.board.dto.request.ArticleCommentRequest;
-import kr.hankyungsoo.board.dto.request.ArticleRequest;
+import kr.hankyungsoo.board.dto.security.BoardPrincipal;
 import kr.hankyungsoo.board.service.ArticleCommentService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,20 +16,24 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class ArticleCommentController {
     private final ArticleCommentService articleCommentService;
 
-    @PostMapping("/new")
-    public String postNewArticleComment(ArticleCommentRequest articleCommentRequest){
-        // TODO: 인증 정보를 넣어줘야 한다.
-        articleCommentService.saveArticleComment(articleCommentRequest.toDto(UserAccountDto.of(
-                "hanks","1234", "hanks@email.com","hanks", "memo"
-        )));
+    @PostMapping ("/new")
+    public String postNewArticleComment(
+            @AuthenticationPrincipal BoardPrincipal boardPrincipal,
+            ArticleCommentRequest articleCommentRequest
+    ) {
+        articleCommentService.saveArticleComment(articleCommentRequest.toDto(boardPrincipal.toDto()));
 
-        return "redirect:/articles/"+articleCommentRequest.articleId();
+
+        return "redirect:/articles/" + articleCommentRequest.articleId();
     }
 
     @PostMapping("/{commentId}/delete")
-    public String deleteArticleComment(@PathVariable Long commentId, Long articleId){
-        articleCommentService.deleteArticleComment(commentId);
-
+    public String deleteArticleComment(
+            @PathVariable Long commentId,
+            @AuthenticationPrincipal BoardPrincipal boardPrincipal,
+            Long articleId
+    ) {
+        articleCommentService.deleteArticleComment(commentId, boardPrincipal.getUsername());
         return "redirect:/articles/" +articleId;
     }
 
