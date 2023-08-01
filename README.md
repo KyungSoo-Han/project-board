@@ -40,8 +40,20 @@ Spring Boot
 ## 화면 캡쳐
 
 ### 메인화면
-![image](https://github.com/KyungSoo-Han/project-board/assets/64920731/48ffbca9-5620-480b-a5a3-49d2f17f59ac)
+![image](https://github.com/KyungSoo-Han/project-board/assets/64920731/21161fd3-0bd9-4bc1-8b0e-c7dc823b6631)
+
 
 ### 상세화면
-![image](https://github.com/KyungSoo-Han/project-board/assets/64920731/a7791ea8-47ac-4e43-8b73-83e566788b80)
+![image](https://github.com/KyungSoo-Han/project-board/assets/64920731/a795f69b-cb0d-4fcb-a05f-606f4e792c13)
+
+### 로그인 - Spring Security 제공 페이지
+![image](https://github.com/KyungSoo-Han/project-board/assets/64920731/a8502191-6fea-473c-b4dd-03b616ea5fd5)
+
+### 로그아웃 - Spring Security 제공 페이지
+![image](https://github.com/KyungSoo-Han/project-board/assets/64920731/78266ca6-ee0f-4300-aef6-4cd9b6564766)
+
+### 해시태그 검색 페이지
+![image](https://github.com/KyungSoo-Han/project-board/assets/64920731/2e2c7074-56ad-4c1c-ab18-e798974858cc)
+
+
 
