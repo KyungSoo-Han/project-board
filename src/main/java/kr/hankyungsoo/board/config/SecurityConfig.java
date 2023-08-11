@@ -23,6 +23,7 @@ public class SecurityConfig  {
         return http
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(PathRequest.toStaticResources().atCommonLocations()).permitAll()
+                        .mvcMatchers("/api/**").permitAll()
                         .mvcMatchers(GET,
                                 "/",
                                 "/articles",
@@ -34,6 +35,7 @@ public class SecurityConfig  {
                 .logout()
                     .logoutSuccessUrl("/")
                     .and()
+                .csrf(csrf -> csrf.ignoringAntMatchers("/api/**"))
                 .build();
     }
 
